@@ -1,1 +1,1 @@
-project of semi-active damper control with architecture
+project of semi-active damper control with architecture of CTRL block AAA
