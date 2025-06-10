@@ -1,1 +1,1 @@
-project of semi-active damper control
+project of semi-active damper control with architecture
