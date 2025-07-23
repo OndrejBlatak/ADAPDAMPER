@@ -1,2 +1,0 @@
-%init
-cal_def('INP_BAT_p_input1',0.1,0,1,'single',1,'s','sample time')

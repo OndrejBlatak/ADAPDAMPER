@@ -5,3 +5,4 @@ cal_def('ESTS_FRIC_p1_MovAvgCoef_na',[0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.
     0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,0.02,...
     0.02,0.02,0.02,0.02],0,2,'single',50,'na','input for FIR filter as moving average')
 cal_def('ESTS_FRIC_p_TirSatLim_na',0.15,0,1,'single',1,'na','tyre saturation limit, where the tyre is saturated over the limit')
+cal_def('ESTS_FRIC_SLIP_p_SwtFriMet_na',2,0,5,'single',1,'na','switch to choose the method to determine the friction coefficient, 1 - our calculation, 2- initial value from the keyboard, 3,4')

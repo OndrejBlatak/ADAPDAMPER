@@ -18,6 +18,10 @@ cal_def('p_RadWhlDynRe_m',0.375,0,1,'single',1,'kgm2','rear dynamic radius')
 cal_def('c_GravConst_mps2',9.80665,0,20,'single',1,'mps2','gravity constant')
 cal_def('p_CrnrgStfnFr_Nprad',300000,0,1000000,'single',1,'Nprad','front cornering stiffness')
 cal_def('p_CrnrgStfnRe_Nprad',300000,0,1000000,'single',1,'Nprad','rear cornering stiffness')
+cal_def('p_BrkTqGainFr_Nmpbar',12,0,100,'single',1,'Nmpbar','brake torque gain front')
+cal_def('p_BrkTqGainRe_Nmpbar',12,0,100,'single',1,'Nmpbar','brake torque gain rear')
+
+p_dt_s = 0.01;
 
 
 

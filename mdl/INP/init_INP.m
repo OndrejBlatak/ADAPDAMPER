@@ -1,16 +1,4 @@
 %init
 
-cal_def('INP_IMU_p_SwtALgtVehMan_na',false,0,1,'boolean',1,'na','---')
-cal_def('INP_IMU_p_ALgtVehMan_mps2',0,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_SwtALatVehMan_na',false,0,1,'boolean',1,'na','---')
-cal_def('INP_IMU_p_ALatVehMan_mps2',0,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_ALgtVehUpLim_mps2',50,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_ALgtVehLoLim_mps2',-50,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_ALatVehUpLim_mps2',50,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_ALatVehLoLim_mps2',-50,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_SwtAVertVehMan_na',false,0,1,'boolean',1,'na','---')
-cal_def('INP_IMU_p_AVertVehMan_mps2',0,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_AVertVehUpLim_mps2',50,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_AVertVehLoLim_mps2',-50,-100,100,'single',1,'mps2','---')
-cal_def('INP_IMU_p_AVehLgtSca_na',1,-100,100,'single',1,'na','---')
-cal_def('INP_IMU_p_AVehLgtOfs_mps2',0,-100,100,'single',1,'mps2','---')
+cal_def('INP_c_TiSample_s',0.01,0,100,'single',1,'s','sampling time for low pass filter')
+cal_def('INP_p_TiTau_s',0.1,0,100,'single',1,'s','Tau time for low pass filter')
