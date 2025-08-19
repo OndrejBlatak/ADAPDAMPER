@@ -31,20 +31,20 @@ bus_def('INP_b_TqBrkHyd',{'INP_BRK_s_PresBrkFr_bar'; 'INP_BRK_s_PresBrkRe_bar'},
 %% 
 sig_def('OFD_s_AngStWhl_rad','0',-1000,1000,'single',1,'rad','steering wheel angle')
 sig_def('OFD_s_PosThr_p100','0',-1000,1000,'single',1,'p100','throttle position')
-sig_def('OFD_s_RegGear_na','0',-1000,1000,'single',1,'na','regime gear')
-sig_def('OFD_s_RegDrvSplit_na','0',-1000,1000,'single',1,'na','regime drive split')
+sig_def('OFD_s_RegDrv_na','0',-1000,1000,'single',1,'na','regime driver')
 
-bus_def('OFD_b_Drvr',{'OFD_s_AngStWhl_rad'; 'OFD_s_PosThr_p100';'OFD_s_RegGear_na';'OFD_s_RegDrvSplit_na'},'bus driver action');
+bus_def('OFD_b_Drvr',{'OFD_s_AngStWhl_rad'; 'OFD_s_PosThr_p100';'OFD_s_RegDrv_na'},'bus driver action');
 %% 
 sig_def('INP_DRVR_s_AngStWhl_rad','0',-1000,1000,'single',1,'rad','steering wheel angle')
+sig_def('INP_DRVR_s_AngRatStWhl_radps','0',-1000,1000,'single',1,'radps','steering wheel angle')
 sig_def('INP_DRVR_s_PosThr_p100','0',-1000,1000,'single',1,'p100','throttle position')
-sig_def('INP_DRVR_s_RegGear_na','0',-1000,1000,'single',1,'na','regime gear')
-sig_def('INP_DRVR_s_RegDrvSplit_na','0',-1000,1000,'single',1,'na','regime drive split')
+sig_def('INP_DRVR_s_PosRatThr_p100ps','0',-1000,1000,'single',1,'p100ps','throttle position')
+sig_def('INP_DRVR_s_RegDrv_na','0',-1000,1000,'single',1,'na','regime drive split')
 sig_def('INP_DRVR_s_AngStFrLe_rad','0',-1000,1000,'single',1,'rad','steer angle front left wheel')
 sig_def('INP_DRVR_s_AngStFrRi_rad','0',-1000,1000,'single',1,'rad','steer angle front right wheel')
 sig_def('INP_DRVR_s_AngStFr_rad','0',-1000,1000,'single',1,'rad','steer angle front wheel - single track model')
 
-bus_def('INP_b_Drvr',{'INP_DRVR_s_AngStWhl_rad'; 'INP_DRVR_s_PosThr_p100';'INP_DRVR_s_RegGear_na';'INP_DRVR_s_RegDrvSplit_na';'INP_DRVR_s_AngStFrLe_rad';'INP_DRVR_s_AngStFrRi_rad';'INP_DRVR_s_AngStFr_rad'},'bus driver action');
+bus_def('INP_b_Drvr',{'INP_DRVR_s_AngStWhl_rad'; 'INP_DRVR_s_AngRatStWhl_radps';'INP_DRVR_s_PosThr_p100';'INP_DRVR_s_PosRatThr_p100ps';'INP_DRVR_s_RegDrv_na';'INP_DRVR_s_AngStFrLe_rad';'INP_DRVR_s_AngStFrRi_rad';'INP_DRVR_s_AngStFr_rad'},'bus driver action');
 %% 
 sig_def('OFD_s_StrkDmpFrLe_V','0',-1000,1000,'single',1,'V','---')
 sig_def('OFD_s_StrkDmpFrRi_V','0',-1000,1000,'single',1,'V','---')
@@ -94,15 +94,13 @@ bus_def('INP_b_AccSpr',{'INP_SPR_s_AccSprFrLe_mps2'; 'INP_SPR_s_AccSprFrRi_mps2'
 %% 
 sig_def('OFD_s_ModDrv_na','0',-1000,1000,'single',1,'na','driver mode')
 sig_def('OFD_s_ModFric_na','0',-1000,1000,'single',1,'na','friction mode')
-sig_def('OFD_s_ModGear_na','1',-1000,1000,'single',1,'na','mode gear')
 
-bus_def('OFD_b_KeyBoa',{'OFD_s_ModDrv_na'; 'OFD_s_ModFric_na';'OFD_s_ModGear_na'},'bus vehicle modes');
+bus_def('OFD_b_KeyBoa',{'OFD_s_ModDrv_na'; 'OFD_s_ModFric_na'},'bus vehicle modes');
 %% 
 sig_def('INP_KEY_s_ModDrv_na','0',-1000,1000,'single',1,'na','driver mode')
 sig_def('INP_KEY_s_ModFric_na','0',-1000,1000,'single',1,'na','friction mode')
-sig_def('INP_KEY_s_ModGear_na','1',-1000,1000,'single',1,'na','mode gear')
 
-bus_def('INP_b_KeyBoa',{'INP_KEY_s_ModDrv_na'; 'INP_KEY_s_ModFric_na'; 'INP_KEY_s_ModGear_na'},'bus vehicle modes');
+bus_def('INP_b_KeyBoa',{'INP_KEY_s_ModDrv_na'; 'INP_KEY_s_ModFric_na'},'bus vehicle modes');
 %% 
 sig_def('ESTS_VMGP_s_trackFr_m','1.4',0,3,'single',1,'m','front vehicle track')
 sig_def('ESTS_VMGP_s_trackRe_m','1.45',0,3,'single',1,'m','rear vehicle track')
@@ -266,4 +264,17 @@ sig_def('INP_EMRR_s_DirMotReRi_na','0',-10,10,'single',1,'na','rear right electr
 sig_def('INP_EMRR_s_TempMotReRi_degC','0',-1000,1000,'single',1,'degC','rear right electric motor temperature')
 
 bus_def('INP_b_ElMotReRi',{'INP_EMRR_s_SpdMotReRi_1pmin'; 'INP_EMRR_s_TqMotReRi_Nm';'INP_EMRR_s_TqMotMaxReRi_Nm';'INP_EMRR_s_TqMotMinReRi_Nm';'INP_EMRR_s_RegMotReRi_na';'INP_EMRR_s_DirMotReRi_na';'INP_EMRR_s_TempMotReRi_degC'},'bus electric motor rear right');
+%% 
+sig_def('ESTS_WHL_s_VelWhlFrLe_mps','0',-1000,1000,'single',1,'mps','---')
+sig_def('ESTS_WHL_s_VelWhlFrRi_mps','0',-1000,1000,'single',1,'mps','---')
+sig_def('ESTS_WHL_s_VelWhlReLe_mps','0',-1000,1000,'single',1,'mps','---')
+sig_def('ESTS_WHL_s_VelWhlReRi_mps','0',-1000,1000,'single',1,'mps','---')
 
+bus_def('ESTS_b_VelWhl',{'ESTS_WHL_s_VelWhlFrLe_mps'; 'ESTS_WHL_s_VelWhlFrRi_mps';'ESTS_WHL_s_VelWhlReLe_mps';'ESTS_WHL_s_VelWhlReRi_mps'},'bus unsprung mass velocity');
+%% 
+sig_def('ESTS_BOD_s_VelBodFrLe_mps','0',-1000,1000,'single',1,'mps','---')
+sig_def('ESTS_BOD_s_VelBodFrRi_mps','0',-1000,1000,'single',1,'mps','---')
+sig_def('ESTS_BOD_s_VelBodReLe_mps','0',-1000,1000,'single',1,'mps','---')
+sig_def('ESTS_BOD_s_VelBodReRi_mps','0',-1000,1000,'single',1,'mps','---')
+
+bus_def('ESTS_b_VelBod',{'ESTS_BOD_s_VelBodFrLe_mps'; 'ESTS_BOD_s_VelBodFrRi_mps';'ESTS_BOD_s_VelBodReLe_mps';'ESTS_BOD_s_VelBodReRi_mps'},'bus body velocity');
