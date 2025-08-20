@@ -21,6 +21,9 @@ cal_def('p_CrnrgStfnRe_Nprad',300000,0,1000000,'single',1,'Nprad','rear cornerin
 cal_def('p_BrkTqGainFr_Nmpbar',12,0,100,'single',1,'Nmpbar','brake torque gain front')
 cal_def('p_BrkTqGainRe_Nmpbar',12,0,100,'single',1,'Nmpbar','brake torque gain rear')
 cal_def('p_RatSt_na',12,0,1000,'single',1,'na','steering ratio')
+cal_def('p_RatMotFr_na',1,0,10,'single',1,'na','motion ratio front')
+cal_def('p_RatMotRe_na',1,0,10,'single',1,'na','motion ratio rear')
+
 
 p_dt_s = 0.01;
 
