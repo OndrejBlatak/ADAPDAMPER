@@ -221,8 +221,9 @@ bus_def('ESTS_LSM_b_RefModel',{'ESTS_LSM_s_AngRatYawRef_radps'; 'ESTS_LSM_s_Slip
 %% 
 sig_def('ESTS_UOD_s_Undrstr_p1','0',0,1,'single',1,'p1','understeer factor')
 sig_def('ESTS_UOD_s_Overstr_p1','0',0,1,'single',1,'p1','oversteer factor')
+sig_def('ESTS_UOD_s_FlgCrnrgDir_na','0',0,1,'single',1,'na','cornering direction, 0 cornering right, 1 cornering left')
 
-bus_def('ESTS_UOD_b_OverUnderStr',{'ESTS_UOD_s_Undrstr_p1'; 'ESTS_UOD_s_Overstr_p1'},'bus under over steer');
+bus_def('ESTS_UOD_b_OverUnderStr',{'ESTS_UOD_s_Undrstr_p1'; 'ESTS_UOD_s_Overstr_p1';'ESTS_UOD_s_FlgCrnrgDir_na'},'bus under over steer');
 
 %% 
 sig_def('INP_EMFL_s_SpdMotFrLe_1pmin','0',-10000,10000,'single',1,'1pmin','front left electric motor speed')
