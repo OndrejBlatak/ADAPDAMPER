@@ -278,3 +278,18 @@ sig_def('ESTS_BOD_s_VelBodReLe_mps','0',-1000,1000,'single',1,'mps','---')
 sig_def('ESTS_BOD_s_VelBodReRi_mps','0',-1000,1000,'single',1,'mps','---')
 
 bus_def('ESTS_b_VelBod',{'ESTS_BOD_s_VelBodFrLe_mps'; 'ESTS_BOD_s_VelBodFrRi_mps';'ESTS_BOD_s_VelBodReLe_mps';'ESTS_BOD_s_VelBodReRi_mps'},'bus body velocity');
+
+%% 
+sig_def('OFD_s_SpdWhlFrLe_V','0',-1000,1000,'single',1,'V','---')
+sig_def('OFD_s_SpdWhlFrRi_V','0',-1000,1000,'single',1,'V','---')
+sig_def('OFD_s_SpdWhlReLe_V','0',-1000,1000,'single',1,'V','---')
+sig_def('OFD_s_SpdWhlReRi_V','0',-1000,1000,'single',1,'V','---')
+
+bus_def('OFD_b_SpdWhl',{'OFD_s_SpdWhlFrLe_V'; 'OFD_s_SpdWhlFrRi_V';'OFD_s_SpdWhlReLe_V';'OFD_s_SpdWhlReRi_V'},'bus wheel speed');
+%% 
+sig_def('INP_SPDWHL_s_SpdWhlFrLe_radps','0',-1000,1000,'single',1,'radps','---')
+sig_def('INP_SPDWHL_s_SpdWhlFrRi_radps','0',-1000,1000,'single',1,'radps','---')
+sig_def('INP_SPDWHL_s_SpdWhlReLe_radps','0',-1000,1000,'single',1,'radps','---')
+sig_def('INP_SPDWHL_s_SpdWhlReRi_radps','0',-1000,1000,'single',1,'radps','---')
+
+bus_def('INP_b_SpdWhl',{'INP_SPDWHL_s_SpdWhlFrLe_radps'; 'INP_SPDWHL_s_SpdWhlFrRi_radps';'INP_SPDWHL_s_SpdWhlReLe_radps';'INP_SPDWHL_s_SpdWhlReRi_radps'},'bus wheel speed');
