@@ -1,0 +1,3 @@
+[submodule "VUT_lib"]
+	path = VUT_lib
+	url = https://github.com/OndrejBlatak/VUT_lib.git
